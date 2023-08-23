@@ -1,0 +1,92 @@
+.intro {
+  padding: $height-header 0 0;
+
+  background-image: url('../../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include vp-1023 {
+    background-position: right;
+  }
+
+  @include vp-767 {
+    background-image: none;
+    background-color: $color-default-white;
+  }
+
+  @include retina {
+    background-image: url('../../img/bg@2x.jpg');
+  }
+
+  &__wrapper {
+    max-width: 780px;
+    padding: 103px 0 203px;
+
+    @include vp-1023 {
+      max-width: auto;
+      padding: 50px 0 100px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 700;
+
+    margin: 0;
+    margin-bottom: 10px;
+
+    color: $color-default-black;
+
+    @include vp-767 {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    margin-bottom: 80px;
+    padding: 0;
+    padding-left: 25px;
+
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 20px;
+
+    position: relative;
+
+    color: $color-default-black;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: -15px;
+
+      width: 5px;
+      height: 2px;
+
+      content: '';
+      background-color: $color-default-black;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+    }
+  }
+
+  &__interface {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 396px;
+
+    @include vp-1023 {
+      flex-direction: column;
+
+      min-height: 120px;
+      margin: 0 auto;
+    }
+  }
+}

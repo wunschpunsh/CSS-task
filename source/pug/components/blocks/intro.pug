@@ -1,0 +1,13 @@
+mixin intro()
+  section.intro
+    .container
+      .intro__wrapper
+        h1.title.title--h1 #[span.title__substr Lorem ipsum] dolor sit ametconsectetur #[span.title__substr adipiscing]
+        p.intro__text At vero eos et accusamus et iusto odio dignissimos ducimus!
+        ul.intro__list
+          li.intro__item Totam rem aperiam eaque ipsa
+          li.intro__item Sit voluptatem accusantium doloremque laudantium
+          li.intro__item Sed ut perspiciatis, unde omnis iste natus error
+        .intro__interface
+          +btn({text: "заказать"}).btn--primary
+          +btn({href: "#", text: "подробнее"}).btn--secondary

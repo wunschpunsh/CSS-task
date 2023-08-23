@@ -1,0 +1,39 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "index.html",
+        text: "Бизнес"
+      },
+      {
+        href: "#",
+        text: "О нас"
+      },
+      {
+        href: "#",
+        text: "Цены"
+      },
+      {
+        href: "#",
+        text: "Оформить заказ"
+      },
+    ]
+
+  header.header(class=headerMods data-header)
+    .container
+      .header__wrapper
+        if(currentUrl === "index.html")
+          span.header__logo
+            +icon('logo' , 247, 35)
+        else
+          a.header__logo(href="index.html" aria-label="Переход на главную") Логотип
+        nav.header__nav.main-nav
+          ul.main-nav__list
+            each link in headerLinks
+              - const activeState = currentUrl === link.href
+              li.main-nav__item
+                if(activeState)
+                  span.main-nav__link.is-active= link.text
+                else
+                  a.main-nav__link(href=link.href)= link.text
+        button.header__toggle(type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger)

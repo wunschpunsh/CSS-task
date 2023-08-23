@@ -1,0 +1,131 @@
+.header {
+  position: fixed;
+  z-index: 100;
+
+  width: 100%;
+  min-height: $height-header;
+  padding: 32px 0;
+
+  background-color: rgba($color-black-russian, 0.9);
+
+  &.is-open & {
+    &__toggle {
+      &::after,
+      &::before {
+        position: absolute;
+        top: 13px;
+        left: 0;
+        right: 0;
+
+        content: '';
+
+        width: 100%;
+        height: 2px;
+
+        transform: rotate(-45deg);
+
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &__nav {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+
+      background-color: $color-black-russian;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    z-index: 50;
+    flex-shrink: 0;
+
+    margin-right: 20px;
+
+    @include vp-1023 {
+      width: 200px;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    @include vp-1023 {
+      z-index: 20;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      display: flex;
+
+      margin: 0;
+      padding: 150px 20px 20px;
+      position: fixed;
+      pointer-events: none;
+      transition: background-color $trans-default;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    z-index: 50;
+
+    display: none;
+
+    width: 35px;
+    height: 21px;
+    padding: 0;
+
+    transition: opacity $trans-default;
+    cursor: pointer;
+    border: none;
+    background-color: $color-transparent;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      width: 100%;
+      height: 2px;
+
+      content: '';
+
+      box-shadow: 0 10px 0 0 $color-default-white,
+        0 20px 0 0 $color-default-white;
+      background-color: $color-default-white;
+    }
+
+    @include hover-focus {
+      opacity: 0.5;
+    }
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>CSS - task</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="CSS — task">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Lato-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Lato-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Lato-ExtraBold.woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" data-header>
+        <div class="container">
+          <div class="header__wrapper"><span class="header__logo">
+              <svg width="247" height="35" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg></span>
+            <nav class="header__nav main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><span class="main-nav__link is-active">Бизнес</span>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Цены</a>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Оформить заказ</a>
+                </li>
+              </ul>
+            </nav>
+            <button class="header__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger></button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="intro">
+          <div class="container">
+            <div class="intro__wrapper">
+              <h1 class="title title--h1"><span class="title__substr">Lorem ipsum</span> dolor sit ametconsectetur <span class="title__substr">adipiscing</span></h1>
+              <p class="intro__text">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+              <ul class="intro__list">
+                <li class="intro__item">Totam rem aperiam eaque ipsa</li>
+                <li class="intro__item">Sit voluptatem accusantium doloremque laudantium</li>
+                <li class="intro__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+              </ul>
+              <div class="intro__interface">
+                <button class="btn btn--primary" type="button">заказать</button>
+                <a class="btn btn--secondary" href="#">подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="order">
+          <div class="container">
+            <div class="order__wrapper">
+              <h2 class="title title--h2">Оформление  <span class="title__substr">Заказа</span></h2>
+              <p class="order__text">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+              <div class="order__scheme">
+                <div class="scheme">
+                  <ul class="scheme__list">
+                    <li class="scheme__item">
+                      <div class="scheme__icon-container">
+                        <svg class="scheme__icon" width="55" height="55" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#search"></use>
+                        </svg>
+                      </div><span class="scheme__text">Lorem ipsum dolorsit amet</span>
+                    </li>
+                    <li class="scheme__item">
+                      <div class="scheme__icon-container">
+                        <svg class="scheme__icon" width="55" height="55" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#percent"></use>
+                        </svg>
+                      </div><span class="scheme__text">Сonsecte turadipiscing elit</span>
+                    </li>
+                    <li class="scheme__item">
+                      <div class="scheme__icon-container">
+                        <svg class="scheme__icon" width="55" height="55" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#document"></use>
+                        </svg>
+                      </div><span class="scheme__text">Sed do eiusmod tempor</span>
+                    </li>
+                    <li class="scheme__item">
+                      <div class="scheme__icon-container">
+                        <svg class="scheme__icon" width="55" height="55" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#mail"></use>
+                        </svg>
+                      </div><span class="scheme__text">Esse cillum doloreeu fugiat</span>
+                    </li>
+                    <li class="scheme__item">
+                      <div class="scheme__icon-container">
+                        <svg class="scheme__icon" width="55" height="55" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#money"></use>
+                        </svg>
+                      </div><span class="scheme__text">Excepteur sint occaecat cupidatat non proident</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <form class="order__form" action="#" method="POST">
+                <div class="order__form-wrapper">
+                  <div class="order__form-item">
+                    <div class="custom-select" data-select><span class="custom-select__placeholder">Выберите тип системы</span>
+                      <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
+                      <ul class="custom-select__list" role="listbox">
+                        <li class="custom-select__item" tabindex="0" aria-selected="false" role="option">Sed ut perspiciatis</li>
+                        <li class="custom-select__item" tabindex="0" aria-selected="false" role="option">Nemo enim ipsam</li>
+                        <li class="custom-select__item" tabindex="0" aria-selected="false" role="option">Et harum quidem</li>
+                        <li class="custom-select__item" tabindex="0" aria-selected="false" role="option">Temporibus autem</li>
+                        <li class="custom-select__item" tabindex="0" aria-selected="false" role="option">Itaque earum rerum</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="order__form-item">
+                    <div class="custom-input">
+                      <label class="custom-input__label">
+                        <input class="custom-input__input" type="email" name="mail" placeholder="Ваш e-mail">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="order__form-item">
+                    <div class="custom-input">
+                      <label class="custom-input__label">
+                        <input class="custom-input__input" type="text" name="name" placeholder="Ваше имя">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="order__form-item order__form-item--big">
+                    <div class="custom-slider">
+                      <div class="custom-slider__info">
+                        <p class="custom-slider__text">Sed ut perspiciatis, unde omnis iste natus</p>
+                        <p class="custom-slider__value"><span class="custom-slider__number">75</span>%</p>
+                      </div>
+                      <div class="slider" id="slider"></div>
+                    </div>
+                  </div>
+                  <div class="order__form-item">
+                    <label class="custom-upload">
+                      <input class="custom-upload__input" type="file" name="upload"><span class="custom-upload__text">Прикрепить файл</span>
+                    </label>
+                  </div>
+                </div>
+                <button class="btn btn--primary" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__copyright">
+              <div class="copyright">
+                <p class="copyright__text">© 2018 <span class="copyright__substr">«LoremIpsum.net» </span>  Все права защищены.</p>
+              </div>
+            </div>
+            <div class="footer__payments">
+              <div class="contacts">
+                <ul class="contacts__list">
+                  <li class="contacts__item"><a class="contacts__link" href="wmk:paylink?url=http://pay.server.com/gifts.php?id=123&amp;purse=R840058594326&amp;amount=100&amp;method=POST&amp;desc=оплата%20услуг&amp;mode=test" target="_blank" rel="nofollow noopener noreferrer">
+                      <svg class="contacts__icon" width="20" height="20" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#qiwi-logo"></use>
+                      </svg><span class="contacts__text">Qiwi wallet</span></a></li>
+                  <li class="contacts__item"><a class="contacts__link" href="wmk:paylink?url=http://pay.server.com/gifts.php?id=123&amp;purse=R840058594326&amp;amount=100&amp;method=POST&amp;desc=оплата%20услуг&amp;mode=test" target="_blank" rel="nofollow noopener noreferrer">
+                      <svg class="contacts__icon" width="20" height="20" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#ya-money-logo"></use>
+                      </svg><span class="contacts__text">Yandex Money</span></a></li>
+                  <li class="contacts__item"><a class="contacts__link" href="wmk:paylink?url=http://pay.server.com/gifts.php?id=123&amp;purse=R840058594326&amp;amount=100&amp;method=POST&amp;desc=оплата%20услуг&amp;mode=test" target="_blank" rel="nofollow noopener noreferrer">
+                      <svg class="contacts__icon" width="20" height="20" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#web-money-logo"></use>
+                      </svg><span class="contacts__text">Web Money</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <div class="contacts">
+                <ul class="contacts__list">
+                  <li class="contacts__item"><a class="contacts__link" href="mailto:info@ipsum228.com" target="_blank" rel="nofollow noopener noreferrer">
+                      <svg class="contacts__icon" width="20" height="20" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#mail-icon"></use>
+                      </svg><span class="contacts__text">info@ipsum228.com</span></a></li>
+                  <li class="contacts__item"><a class="contacts__link" href="#" target="_blank" rel="nofollow noopener noreferrer">
+                      <svg class="contacts__icon" width="20" height="20" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#vk-logo"></use>
+                      </svg><span class="contacts__text">Мы вконтакте</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

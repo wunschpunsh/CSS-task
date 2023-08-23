@@ -1,0 +1,78 @@
+.scheme {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 30px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include vp-767 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    z-index: 2;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:nth-child(5n)):not(:last-child)::before {
+      z-index: -1;
+      position: absolute;
+      top: 47px;
+      right: -70px;
+
+      content: '';
+
+      width: 110px;
+      height: 6px;
+
+      background-image: url('../../img/svg/decore-circles.svg');
+      background-repeat: repeat-x;
+      background-size: auto;
+      background-position: center;
+
+      @media (min-width: $vp-768) and (max-width: $vp-1170) {
+        right: -83px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  &__icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+    border: 5px solid $color-endeavour;
+    background-color: $color-summer-sky;
+  }
+
+  &__icon {
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__text {
+    min-height: 44px;
+  }
+}

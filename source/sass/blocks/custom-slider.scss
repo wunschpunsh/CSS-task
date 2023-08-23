@@ -1,0 +1,42 @@
+.custom-slider {
+  &__info {
+    font-size: 18px;
+
+    display: flex;
+
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    flex-grow: 1;
+
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  &__value {
+    margin: 0;
+  }
+
+  .slider {
+    height: 7px;
+
+    border: 1px solid $color-default-white;
+    background-color: rgba($color-default-white, 0.7);
+  }
+
+  .noUi-origin {
+    width: 100%;
+  }
+
+  .noUi-handle {
+    top: -12px;
+
+    width: 28px;
+    height: 28px;
+
+    background-color: $color-summer-sky;
+    border: 3px solid $color-endeavour;
+    box-shadow: none;
+  }
+}

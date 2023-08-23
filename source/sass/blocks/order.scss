@@ -1,0 +1,77 @@
+.order {
+  padding: 121px 0 151px;
+
+  background-color: $color-jaguar;
+  background-image: url('../../img/bg-map.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include retina {
+    background-image: url('../../img/bg-map@2x.png');
+  }
+
+  &__form {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 30px;
+
+      margin-bottom: 40px;
+
+      @include vp-1023 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+
+    &-item {
+      &--big {
+        grid-column: span 2;
+      }
+
+      @include vp-1023 {
+        &:last-child {
+          order: -1;
+        }
+      }
+
+      @include vp-767 {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    margin: 0;
+    margin-bottom: 80px;
+
+    color: $color-silver;
+  }
+
+  &__scheme {
+    margin-bottom: 80px;
+  }
+
+  .btn {
+    font-size: 15px;
+
+    display: flex;
+
+    min-width: 370px;
+    margin: 0 auto;
+
+    @include vp-767 {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+}

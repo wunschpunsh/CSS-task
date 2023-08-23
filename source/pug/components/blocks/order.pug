@@ -1,0 +1,74 @@
+
+
+
+mixin order()
+  -
+    const schemeData = [
+      {
+        icon: 'search',
+        text: 'Lorem ipsum dolorsit amet'
+      },
+      {
+        icon: 'percent',
+        text: 'Сonsecte turadipiscing elit'
+      },
+      {
+        icon: 'document',
+        text: 'Sed do eiusmod tempor'
+      },
+      {
+        icon: 'mail',
+        text: 'Esse cillum doloreeu fugiat'
+      },
+      {
+        icon: 'money',
+        text: 'Excepteur sint occaecat cupidatat non proident'
+      }
+    ]
+
+  section.order
+    .container
+      .order__wrapper
+        h2.title.title--h2 Оформление  #[span.title__substr Заказа]
+        p.order__text Перед заполнением формы ознакомьтесь с нашей схемой работы!
+        .order__scheme
+          +scheme(schemeData)
+        form.order__form(action="#" method="POST")
+          .order__form-wrapper
+            .order__form-item
+              +custom-select({
+                placeholder: 'Выберите тип системы',
+                optionsList: [
+                  {
+                    text: 'Sed ut perspiciatis',
+                  },
+                  {
+                    text: 'Nemo enim ipsam',
+                  },
+                  {
+                    text: 'Et harum quidem',
+                  },
+                  {
+                    text: 'Temporibus autem',
+                  },
+                  {
+                    text: 'Itaque earum rerum',
+                  }
+                ]
+              }).custom-select(data-select)
+            .order__form-item
+              +custom-input({
+                inputPlaceholder: 'Ваш e-mail',
+                inputType: "email",
+                inputName: 'mail'
+              })
+            .order__form-item
+              +custom-input({
+                inputPlaceholder: 'Ваше имя',
+                inputName: 'name'
+              })
+            .order__form-item.order__form-item--big
+              +custom-slider()
+            .order__form-item
+              +custom-upload
+          +btn({type: "submit",text: "Отправить"}).btn--primary

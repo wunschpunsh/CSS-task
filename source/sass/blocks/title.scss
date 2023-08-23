@@ -1,0 +1,32 @@
+.title {
+  font-weight: 700;
+  line-height: normal;
+
+  margin: 0;
+
+  text-transform: uppercase;
+  color: $color-default-black;
+
+  &--h1 {
+    font-size: 48px;
+    margin-bottom: 80px;
+
+    @include vp-767 {
+      font-size: 28px;
+    }
+  }
+
+  &--h2 {
+    font-size: 36px;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+    color: $color-default-white;
+  }
+
+  &__substr {
+    color: $color-summer-sky;
+  }
+}

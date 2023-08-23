@@ -1,0 +1,43 @@
+mixin footer(footerMods)
+  -
+    const footerLinks = {
+      payments: [
+        {
+          href: 'wmk:paylink?url=http://pay.server.com/gifts.php?id=123&purse=R840058594326&amount=100&method=POST&desc=оплата%20услуг&mode=test',
+          icon: 'qiwi-logo',
+          text: 'Qiwi wallet',
+        },
+        {
+          href: 'wmk:paylink?url=http://pay.server.com/gifts.php?id=123&purse=R840058594326&amount=100&method=POST&desc=оплата%20услуг&mode=test',
+          icon: 'ya-money-logo',
+          text: 'Yandex Money',
+        },
+        {
+          href: 'wmk:paylink?url=http://pay.server.com/gifts.php?id=123&purse=R840058594326&amount=100&method=POST&desc=оплата%20услуг&mode=test',
+          icon: 'web-money-logo',
+          text: 'Web Money',
+        }
+      ],
+      contacts: [
+        {
+          href: 'mailto:info@ipsum228.com',
+          icon: 'mail-icon',
+          text: 'info@ipsum228.com',
+        },
+        {
+          href: '#',
+          icon: 'vk-logo',
+          text: 'Мы вконтакте',
+        }
+      ]
+    }
+
+  footer.footer(class=footerMods)
+    .container
+      .footer__wrapper
+        .footer__copyright
+          +copyright
+        .footer__payments
+          +contacts(footerLinks.payments)
+        .footer__contacts
+          +contacts(footerLinks.contacts)

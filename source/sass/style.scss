@@ -1,0 +1,33 @@
+// Vendor
+// ---------------------------------
+
+@import 'vendor/nouislider.scss';
+@import 'vendor/normalize';
+
+// Global
+// ---------------------------------
+
+@import 'variables';
+@import 'mixins';
+@import 'global/fonts';
+@import 'global/reboot';
+@import 'global/utils';
+@import 'global/container';
+
+// Blocks
+// ---------------------------------
+
+@import 'blocks/header';
+@import 'blocks/main-nav';
+@import 'blocks/footer';
+@import 'blocks/btn';
+@import 'blocks/custom-input';
+@import 'blocks/custom-select';
+@import 'blocks/custom-slider';
+@import 'blocks/custom-upload.scss';
+@import 'blocks/copyright';
+@import 'blocks/contacts.scss';
+@import 'blocks/title.scss';
+@import 'blocks/intro.scss';
+@import 'blocks/order.scss';
+@import 'blocks/scheme.scss';

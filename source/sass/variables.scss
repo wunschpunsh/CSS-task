@@ -1,0 +1,48 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-black-russian: #10101d;
+$color-jaguar: #272733;
+$color-blue-zodiac: #3d4050;
+$color-summer-sky: #3e9cdc;
+$color-silver: #c3c3c3;
+$color-endeavour: #286690;
+$color-dolphin: #6f6d7b;
+$color-transparent: rgba(255, 255, 255, 0);
+
+// Fonts
+
+$fz-default: 16px;
+$ff-lato: 'Lato', 'Arial', sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-320: 320px;
+$vp-375: 375px;
+$vp-768: 768px;
+$vp-1024: 1024px;
+$vp-1170: 1170px;
+$vp-1280: 1280px;
+$vp-1440: 1440px;
+$vp-1920: 1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Size
+
+$height-header: 100px;

@@ -1,0 +1,55 @@
+.custom-upload {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 48px;
+
+  cursor: pointer;
+
+  background-color: rgba($color-default-white, 0.85);
+  border: 1px solid $color-default-white;
+  border-radius: 3px;
+  outline: none;
+
+  &__input {
+    z-index: -1;
+    position: absolute;
+
+    display: block;
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: 600;
+
+    position: relative;
+
+    display: block;
+
+    text-transform: uppercase;
+    color: $color-jaguar;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -25px;
+
+      width: 17px;
+      height: 20px;
+
+      content: '';
+
+      background-image: url('../../img/svg/document2.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+    }
+  }
+}
